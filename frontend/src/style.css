@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f9fc;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1a2634;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.upload-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  padding: 8px;
+}
+
+.upload-btn {
+  background: #0058ff;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.upload-btn:hover {
+  background: #0044cc;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #333;
+  margin-top: 30px;
+}
+
+.doc-list {
+  margin-top: 15px;
+}
+
+.doc-card {
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.doc-actions button {
+  margin-left: 10px;
+}
+
+.download-btn {
+  background: #22c55e;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.download-btn:hover {
+  background: #16a34a;
+}
+
+.delete-btn {
+  background: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+  color: #777;
+}
+.view-btn {
+  background: #3b82f6;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  background: #2563eb;
+}
