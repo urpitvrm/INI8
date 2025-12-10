@@ -90,12 +90,12 @@ v
 ```
 Description: Get a list of all uploaded documents.
 
-###3. Download Document
+### 3. Download Document
 
 - **URL:** `/documents/:id`
 - **Method:** GET
 - **Description:** Download the selected PDF file.
-###4. Delete Document
+### 4. Delete Document
 - **URL:** `/documents/:id`
 Method: DELETE
 Response:
