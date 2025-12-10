@@ -40,3 +40,34 @@ This document follows the assignment instructions and covers architecture, stack
 ## 2. Architecture Overview
 
 ### System Flow
+[React Frontend]
+|
+v
+[Express Backend] -----> [uploads/ Folder] (stores actual PDFs)
+|
+v
+[SQLite Database] (stores metadata: id, filename, filepath, filesize, created_at)
+
+
+
+### Flow Description
+1. User selects a PDF in frontend.  
+2. Frontend sends POST request to backend `/documents/upload`.  
+3. Backend stores file in `uploads/` folder.  
+4. Metadata is recorded in SQLite.  
+5. Frontend lists all documents, allows view/download/delete actions.
+
+---
+
+## 3. API Specification
+
+### 1. Upload PDF
+- **URL:** `/documents/upload`  
+- **Method:** POST  
+- **Request:** multipart/form-data, field: `file`  
+- **Response:**
+```json
+{
+  "message": "File uploaded",
+  "id": 3
+}
