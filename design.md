@@ -71,3 +71,88 @@ v
   "message": "File uploaded",
   "id": 3
 }
+
+2. List Documents
+
+URL: /documents
+
+Method: GET
+
+Response:
+
+[
+  {
+    "id": 1,
+    "filename": "report.pdf",
+    "filesize": 102400,
+    "created_at": "2025-01-10T12:00:00Z"
+  }
+]
+
+
+Description: Get a list of all uploaded documents.
+
+3. Download Document
+
+URL: /documents/:id
+
+Method: GET
+
+Description: Download the selected PDF file.
+
+4. Delete Document
+
+URL: /documents/:id
+
+Method: DELETE
+
+Response:
+
+{ "message": "File deleted" }
+
+
+Description: Deletes the file and its metadata.
+
+4. Data Flow Description
+
+Upload Flow:
+
+User selects PDF in frontend.
+
+Frontend sends POST request with multipart/form-data.
+
+Backend validates PDF using Multer.
+
+File saved in uploads/.
+
+Metadata inserted in SQLite table.
+
+Backend returns success response.
+
+Frontend refreshes document list.
+
+Download Flow:
+
+User clicks download button.
+
+React requests /documents/:id.
+
+Backend fetches file path from SQLite.
+
+Sends PDF to browser.
+
+5. Assumptions
+
+Only PDF files allowed.
+
+Max file size ~5–10 MB.
+
+Single-user application (no authentication).
+
+Local storage only.
+
+File name collisions avoided by timestamp prefix.
+
+Basic error handling implemented.
+
+No concurrency or versioning needed.
